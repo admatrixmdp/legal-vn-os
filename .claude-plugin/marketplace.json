@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "legal-vn-os",
+  "description": "Thư viện luật Việt Nam dùng chung của hệ MQ (tham khảo, không phải tư vấn pháp lý).",
+  "owner": { "name": "admatrixmdp" },
+  "plugins": [
+    {
+      "name": "vn-legal-check",
+      "source": "./ben-ngoai/vn-legal-skills",
+      "description": "Rà web/app ở Việt Nam theo luật VN, báo cáo file:dòng, căn cứ, mức phạt và thủ tục phải làm. Bản gốc: Tiro-dev-NT/vn-legal-skills (MIT).",
+      "version": "0.1.0",
+      "category": "compliance"
+    }
+  ]
+}
