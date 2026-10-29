@@ -1,0 +1,29 @@
+name: Kiểm thư viện luật
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  kiem:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bộ tự kiểm của vn-legal-skills
+        working-directory: ben-ngoai/vn-legal-skills
+        run: python -I scripts/kiem-nhat-quan.py
+      - name: marketplace.json đọc được và trỏ đúng plugin
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          m = json.load(open(".claude-plugin/marketplace.json"))
+          for p in m["plugins"]:
+              src = p["source"]
+              if not os.path.isfile(os.path.join(src, ".claude-plugin", "plugin.json")):
+                  sys.exit(f"{src}: thiếu .claude-plugin/plugin.json")
+          print("marketplace.json ổn")
+          PY
