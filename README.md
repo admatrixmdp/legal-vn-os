@@ -19,8 +19,11 @@
 | Thư mục | Chứa gì | Trạng thái |
 |---|---|---|
 | `ben-ngoai/vn-legal-skills/` | Bản sao nguyên vẹn repo `Tiro-dev-NT/vn-legal-skills` (MIT): skill `vn-legal-check`, 12 mảng luật, 106 văn bản, trích nguyên văn Công báo | Đã có |
+| `ben-ngoai/design-os-knowledge-builder/` | Bản sao nguyên vẹn repo `jangtrinh/design-os-knowledge-builder` (PolyForm Shield 1.0.0): CLI đóng băng nguồn, kiểm trích dẫn, cổng dừng | Đã có |
+| `skills/kiem-chung-luat/` | Skill của MQ: kiểm chứng văn bản luật làm căn cứ, gọi động cơ ở `ben-ngoai/design-os-knowledge-builder/` | Đã có |
 | `nguon/` | Sổ văn bản dùng chung cho cả hệ | Chưa dựng — xem `nguon/README.md` |
 | `scripts/dong-bo-vn-legal-skills.sh` | Lấy bản mới nhất của repo gốc, báo file nào đổi | Đã có |
+| `scripts/dong-bo-knowledge-builder.sh` | Như trên, cho `design-os-knowledge-builder` | Đã có |
 | `.claude-plugin/` | Cài skill `vn-legal-check` từ repo này | Đã có |
 
 ## Cài skill rà sản phẩm số
@@ -29,6 +32,14 @@
 /plugin marketplace add admatrixmdp/legal-vn-os
 /plugin install vn-legal-check@legal-vn-os
 ```
+
+## Cài skill kiểm chứng luật
+
+```
+/plugin install legal-vn-os@legal-vn-os
+```
+
+Rồi gọi skill `kiem-chung-luat` (hiện dạng `/legal-vn-os:kiem-chung-luat`) và nói: *"kiểm chứng TT 99/2025 điều 9 và 31"*. Skill cần chạy trong bản chép đủ repo vì dùng động cơ trong `ben-ngoai/`.
 
 Rồi mở dự án cần rà và nói: *"rà dự án này theo luật Việt Nam"*. Skill chỉ đọc mã và viết báo cáo, không sửa gì.
 
