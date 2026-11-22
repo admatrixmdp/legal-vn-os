@@ -16,6 +16,11 @@ jobs:
       - name: Bộ tự kiểm của vn-legal-skills
         working-directory: ben-ngoai/vn-legal-skills
         run: python -I scripts/kiem-nhat-quan.py
+      - name: Bộ tự kiểm của design-os-knowledge-builder
+        working-directory: ben-ngoai/design-os-knowledge-builder
+        run: |
+          python -I scripts/self_check.py
+          PYTHONPATH=src python -I -m unittest discover -s tests -t . -q
       - name: marketplace.json đọc được và trỏ đúng plugin
         run: |
           python - <<'PY'

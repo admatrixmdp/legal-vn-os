@@ -19,8 +19,10 @@
 | Thư mục | Chứa gì | Trạng thái |
 |---|---|---|
 | `ben-ngoai/vn-legal-skills/` | Bản sao nguyên vẹn repo `Tiro-dev-NT/vn-legal-skills` (MIT): skill `vn-legal-check`, 12 mảng luật, 106 văn bản, trích nguyên văn Công báo | Đã có |
+| `ben-ngoai/design-os-knowledge-builder/` | Bản sao nguyên vẹn repo `jangtrinh/design-os-knowledge-builder` (PolyForm Shield 1.0.0): CLI đóng băng nguồn, kiểm trích dẫn, cổng dừng | Đã có |
 | `nguon/` | Sổ văn bản dùng chung cho cả hệ | Chưa dựng — xem `nguon/README.md` |
 | `scripts/dong-bo-vn-legal-skills.sh` | Lấy bản mới nhất của repo gốc, báo file nào đổi | Đã có |
+| `scripts/dong-bo-knowledge-builder.sh` | Như trên, cho `design-os-knowledge-builder` | Đã có |
 | `.claude-plugin/` | Cài skill `vn-legal-check` từ repo này | Đã có |
 
 ## Cài skill rà sản phẩm số
